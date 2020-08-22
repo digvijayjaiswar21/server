@@ -12,7 +12,6 @@ const cors = require('cors');
 const databaseConnection = require('./db/database');
 const users = require('./routes/users');
 const auth = require('./routes/auth');
-const registrations = require('./routes/registrations');
 const courses = require('./routes/course');
 
 const PORT = 3000;
@@ -35,7 +34,6 @@ app.use(function (req, res, next) {
 
 app.use(`/api/users`,users);
 app.use(`/api/auth`,auth);
-app.use(`/api/registrations`,registrations);
 app.use(`/api/course`,courses);
 
 app.listen(PORT,()=>{

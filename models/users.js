@@ -2,6 +2,7 @@ const Joi = require('joi');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const constant = require('../constants/constant');
+
 const usersSchema = new mongoose.Schema({
     firstname:{
         type:String,
