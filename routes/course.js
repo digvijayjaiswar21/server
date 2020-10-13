@@ -4,7 +4,8 @@ const auth = require('../middlewares/auth');
 const courses = require('../controllers/course');
 const admin = require('../middlewares/admin');
 
-router.get('/',[auth],courses.getCourses);
-router.post('/createCourse',[auth,admin],courses.addCourse);
+router.route('/')
+      .get([auth],courses.getCourses)
+      .post([auth,admin],courses.addCourse);
 
 module.exports = router;

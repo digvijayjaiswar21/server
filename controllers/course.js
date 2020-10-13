@@ -11,7 +11,7 @@ exports.addCourse = async (req,res) => {
     if(courseCreated) return res.status(201).json({
     resCode : 200,
     course_id  :  courseCreated._id,
-    message :'Course created'
+    message : 'Course created'
     });
   }
   catch(ex){
